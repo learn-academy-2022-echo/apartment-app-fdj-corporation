@@ -1,15 +1,15 @@
 import React from "react"
 import {Card, CardHeader, ListGroup, ListGroupItem,} from "reactstrap"
 
-const ApartmentIndex = ({mockApartmentsDataPass}) => {
 
-console.log(mockApartmentsDataPass)
+const ApartmentIndex = ({mockApartmentsDataPass}) => {
+// console.log(mockApartmentsDataPass)
   return (
   <div>
-      <div>
-    <h1>See All Avaliable Apartments</h1>
-      </div>
-    {mockApartmentsDataPass.map((mockApartment)=>{
+    <div>
+        <h1>See All Avaliable Apartments</h1>
+    </div>
+      {mockApartmentsDataPass.map((mockApartment)=>{
         return (
             <>
               <Card style={{width: '18rem'}}
@@ -39,7 +39,7 @@ console.log(mockApartmentsDataPass)
             </>
 )
 })}
-</div>
+  </div>
 )}
 
 export default ApartmentIndex
