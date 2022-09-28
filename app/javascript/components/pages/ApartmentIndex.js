@@ -11,34 +11,40 @@ const ApartmentIndex = ({mockApartmentsDataPass}) => {
     </div>
       {mockApartmentsDataPass.map((mockApartment)=>{
         return (
-            <>
-              <Card style={{width: '18rem'}}
-                  >
-                <CardHeader>
-                  Apartments Avaliable
-                </CardHeader>
-                <ListGroup flush>
-                <img
-                  alt="Card"
-                  src={mockApartment.image}
-                />
-                  <ListGroupItem>
-                  {mockApartment.street} , {mockApartment.city}
-                  </ListGroupItem>
-                  <ListGroupItem>
-                    {mockApartment.price} 
-                  </ListGroupItem>
-                  <ListGroupItem>
-                    Bathrooms: {mockApartment.bathrooms} 
-                  </ListGroupItem>
-                  <ListGroupItem>
-                    Bedrooms: {mockApartment.bedrooms} 
-                  </ListGroupItem>
-                </ListGroup>
-              </Card>
-            </>
-)
-})}
+              <>
+                <Card style={{width: '18rem'}}
+                    >
+                  <CardHeader>
+                    Apartments Avaliable
+                  </CardHeader>
+                    <ListGroup flush>
+                    <img
+                      alt="Card"
+                      src={mockApartment.image}
+                    />
+                    <ListGroupItem>
+                      Location:{mockApartment.street} , {mockApartment.city}, {mockApartment.state}
+                    </ListGroupItem>
+                    <ListGroupItem>
+                      Manager Contact Information:{mockApartment.manager} , {mockApartment.email}
+                    </ListGroupItem>
+                    <ListGroupItem>
+                      Price: {mockApartment.price} 
+                    </ListGroupItem>
+                    <ListGroupItem>
+                      Bathrooms: {mockApartment.bathrooms} 
+                    </ListGroupItem>
+                    <ListGroupItem>
+                      Bedrooms: {mockApartment.bedrooms} 
+                    </ListGroupItem>
+                    <ListGroupItem>
+                      Pets Allowed: {mockApartment.pets} 
+                    </ListGroupItem>
+                  </ListGroup>
+                </Card>
+              </>
+          )
+      })}
   </div>
 )}
 
