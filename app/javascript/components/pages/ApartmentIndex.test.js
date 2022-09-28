@@ -6,19 +6,11 @@ import mockApartmentsData from '../mockApartments'
 
 describe("<ApartmentIndex />", () => {
   it("renders without crashing", () => {
-    const header = document.createElement("h3")
-   render (
-    <BrowserRouter>
-      <ApartmentIndex mockApartmentsDataPass={mockApartmentsData}/>
-    </BrowserRouter>
-   )
+  const div = document.createElement("div")
+   render(
+      <ApartmentIndex mockApartmentsDataPass={mockApartmentsData}/>, div
+    )
+    expect(screen.getByText("See All Avaliable Apartments")).toBeInTheDocument()
 
-   mockApartmentsData.forEach((apartment) => {
-    const apartmentimage = screen.getByText(apartment.image)
-    expect(apartmentimage).toBeInTheDocument()
    })
-
-
-  
   })
-})
