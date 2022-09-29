@@ -21,6 +21,13 @@ describe("<Navigation />", () => {
       </BrowserRouter>
     )
     userEvent.click(screen.getByText("Home"))
+    // userEvent.click(screen.getByText("Create a listings"))
+    //  userEvent.click(screen.getByText("My listings"))
+    userEvent.click(screen.getByText("Show all apartments"))
     expect(screen.getByText("Home")).toBeInTheDocument()
+    //  expect(screen.getByText("Create a listings")).toBeInTheDocument()
+    //  expect(screen.getByText("My listings")).toBeInTheDocument()
+    expect(screen.getByText("Show all apartments")).toBeInTheDocument()
+
   })
 })
