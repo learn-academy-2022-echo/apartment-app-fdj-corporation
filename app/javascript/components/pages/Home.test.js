@@ -1,10 +1,18 @@
 import React from "react"
-import { render } from "@testing-library/react"
+import { render, screen, userEvent} from "@testing-library/react"
 import Home from "./Home"
+import BrowserRouter from 'react-router-dom'
+
 
 describe("<Home />", () => {
   it("renders without crashing", () => {
-    const div = document.createElement("div")
-    render(<Home />, div)
+    render(<Home />)
+    expect(screen.getByText("Welcome the top Apartment Management Team")).toBeInTheDocument()
+  })
+  it("renders a button to sign in", () => {
+    render(
+      <Home />
+    )
+    expect(screen.getByText("Sign In")).toBeInTheDocument()
   })
 })
