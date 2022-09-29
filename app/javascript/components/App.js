@@ -28,6 +28,10 @@ const App = (props) => {
       .catch((error) => console.log(error))
   }
 
+  const createApartment = (apartment) => {
+    console.log(apartment)
+  }
+
   return (
     <BrowserRouter>
       <Header {...props} />
@@ -35,7 +39,7 @@ const App = (props) => {
         <Route exact path="/" element={<Home {...props}/>} />
         <Route path="/apartmentindex" element={<ApartmentIndex mockApartmentsDataPass={mockApartmentsData} />} />
         <Route path="/apartmentshow" element={<ApartmentShow />} />
-        <Route path="/apartmentnew" element={<ApartmentNew />} />
+        <Route path="/apartmentnew" element={<ApartmentNew createApartment={createApartment}/>} />
         <Route path="/apartmentedit" element={<ApartmentEdit />} />
         <Route element={<NotFound />} />
       </Routes>
